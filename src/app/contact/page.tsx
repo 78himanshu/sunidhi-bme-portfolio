@@ -54,7 +54,7 @@ export default function ContactPage() {
             >
               Send Message
             </button>
-            <p className="text-xs text-slate-500">Form is placeholder. No backend email sending is configured.</p>
+            <p className="text-xs text-slate-500">I typically reply immediately in 1-2 days, E-mails are my preferred method of communication</p>
           </Card>
           <div className="space-y-4">
             <Card className="p-6" hover={false}>
