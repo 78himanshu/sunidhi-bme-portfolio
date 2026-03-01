@@ -29,7 +29,7 @@ export const profile = {
   email: "sunidhi.1@duke.edu",
   linkedinUrl: "https://www.linkedin.com/in/sunidhipandit08/",
   summary:
-    "Biomedical engineer focused on medical device design and verification. Experienced in quality systems, design controls, and test automation for electrophysiology and catheter platforms. Known for crisp, data-backed execution that improves repeatability, reliability, and regulatory readiness.",
+    "I’m a biomedical engineer driven by the challenge of turning complex healthcare problems into practical, scalable solutions. My experience spans the medical device lifecycle, from gathering clinical insights and developing concepts to engineering design, quality and validation, and manufacturing execution, with a focus on ensuring innovations are not only creative but also safe, reliable, and ready for real-world use. I bring a systems-level mindset and strong cross-functional collaboration to connect engineering rigor with clinical relevance, helping teams move ideas into production-ready technologies that can meaningfully improve patient care.",
   impactHighlights: [
     {
       label: "Cost Reduction",
