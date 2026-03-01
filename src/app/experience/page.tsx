@@ -6,6 +6,21 @@ import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 
 export default function ExperiencePage() {
+  const galleryItems = [
+    { src: "/experience-gallery/01.png", alt: "Gallery 01" },
+    { src: "/experience-gallery/02.png", alt: "Gallery 02" },
+    { src: "/experience-gallery/03.png", alt: "Gallery 03" },
+    { src: "/experience-gallery/04.png", alt: "Gallery 04" },
+    { src: "/experience-gallery/05.png", alt: "Gallery 05" },
+    { src: "/experience-gallery/06.png", alt: "Gallery 06" },
+    { src: "/experience-gallery/07.png", alt: "Gallery 07" },
+    { src: "/experience-gallery/08.png", alt: "Gallery 08" },
+    { src: "/experience-gallery/09.png", alt: "Gallery 09" },
+    { src: "/experience-gallery/10.png", alt: "Gallery 10" },
+    { src: "/experience-gallery/11.png", alt: "Gallery 11" },
+    { src: "/experience-gallery/12.png", alt: "Gallery 12" },
+  ];
+
   return (
     <Section>
       <Container>
@@ -52,6 +67,20 @@ export default function ExperiencePage() {
             Comfortable operating within design control frameworks, risk management, and ISO 13485 quality systems. Experienced in
             verification evidence planning, test method validation, and traceability from user needs to design outputs and test results.
           </p>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-xl font-semibold text-slate-900">Gallery</h3>
+          <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {galleryItems.map((item) => (
+              <div
+                key={item.src}
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md"
+              >
+                <img src={item.src} alt={item.alt} className="h-full w-full object-cover" />
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </Section>
