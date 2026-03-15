@@ -105,7 +105,7 @@ export const profile = {
       group: "Manufacturing",
       role: "Manufacturing and Operations Head",
       location: "India",
-      dates: "May 2023-Jul 2024",
+      dates: "May 2022-Jul 2024",
       bullets: [
         "Directed ISO-controlled Class I cleanroom manufacturing across 2 production lines and 4 SKUs; managed daily documentation review, in-process QC checks, and dispatch to deliver ~10,000 units/month with 98% OTIF and >97% FPY.",
         "Drove defect containment/disposition for line events; executed bracketing, initiated CAPA investigations, and implemented corrective actions with QC/Ops, reducing defect rate 35% and scrap/rework 25% in one quarter.",
