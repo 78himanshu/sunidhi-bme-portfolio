@@ -186,20 +186,20 @@ export const profile = {
       tags: ["Testing Automation", "Verification", "Mechatronics"],
       images: ["/projects/automated-ablation-fixture-1.png", "/projects/automated-ablation-fixture-2.png"]
     },
-    {
-      title: "Catheter Handle Rotation Fixture",
-      slug: "catheter-handle-rotation-fixture",
-      description:
-        "Automated rotational cycling fixture to verify handle durability and torque-transmission integrity.",
-      bullets: [
-        "Motorized rotation with programmable cycle count and angular limits.",
-        "Torque and rotation control to simulate worst-case user actuation loads.",
-        "Rigid clamping interface to constrain handle and prevent slip.",
-        "Repeatable alignment and low-backlash drivetrain for consistent fatigue profiles."
-      ],
-      tags: ["Fatigue Testing", "Verification", "Fixture Design"],
-      images: ["/projects/catheter-handle-rotation-1.png", "/projects/catheter-handle-rotation-2.png"]
-    },
+      // {
+      //   title: "Catheter Handle Rotation Fixture",
+      //   slug: "catheter-handle-rotation-fixture",
+      //   description:
+      //     "Automated rotational cycling fixture to verify handle durability and torque-transmission integrity.",
+      //   bullets: [
+      //     "Motorized rotation with programmable cycle count and angular limits.",
+      //     "Torque and rotation control to simulate worst-case user actuation loads.",
+      //     "Rigid clamping interface to constrain handle and prevent slip.",
+      //     "Repeatable alignment and low-backlash drivetrain for consistent fatigue profiles."
+      //   ],
+      //   tags: ["Fatigue Testing", "Verification", "Fixture Design"],
+      //   images: ["/projects/catheter-handle-rotation-1.png", "/projects/catheter-handle-rotation-2.png"]
+      // },
     {
       title: "PLGA Nanoparticles for Brain Tumor",
       slug: "plga-nanoparticles",
