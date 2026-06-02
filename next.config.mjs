@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    optimizePackageImports: ["react", "react-dom"]
-  }
-};
+const nextConfig = {};
 
 export default nextConfig;

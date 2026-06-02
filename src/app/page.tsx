@@ -6,6 +6,7 @@ import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
+import ResumeModal from "@/components/ResumeModal";
 
 export default function HomePage() {
   return (
@@ -27,12 +28,9 @@ export default function HomePage() {
                 >
                   View Projects
                 </Link>
-                <a
-                  href="/api/resume"
+                <ResumeModal
                   className="rounded-full border border-slate-900 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-slate-900 transition hover:bg-slate-900 hover:text-white"
-                >
-                  Download Resume
-                </a>
+                />
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">

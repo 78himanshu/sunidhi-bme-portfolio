@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { profile } from "@/data/profile";
 import Container from "@/components/ui/Container";
+import ResumeModal from "@/components/ResumeModal";
 
 const navItems = [
   { href: "/", label: "Overview" },
@@ -44,12 +45,9 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="/api/resume"
+          <ResumeModal
             className="rounded-full border border-slate-900 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-900 transition hover:bg-slate-900 hover:text-white"
-          >
-            Download Resume
-          </a>
+          />
         </div>
       </Container>
 
