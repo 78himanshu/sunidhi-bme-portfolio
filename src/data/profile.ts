@@ -1,5 +1,6 @@
 export type Experience = {
   company: string;
+  logo?: string;
   group: string;
   role: string;
   location: string;
@@ -20,6 +21,14 @@ export type Project = {
 export type SkillGroup = {
   title: string;
   skills: string[];
+};
+
+export type Education = {
+  degree: string;
+  school: string;
+  logo: string;
+  details: string;
+  subtext?: string;
 };
 
 export const profile = {
@@ -55,6 +64,7 @@ export const profile = {
   experiences: [
     {
       company: "Johnson & Johnson MedTech",
+      logo: "/company-logos/jnj.png",
       group: "Electrophysiology",
       role: "NPD Quality Co-op",
       location: "Irvine, CA",
@@ -71,6 +81,7 @@ export const profile = {
     },
     {
       company: "Johnson & Johnson MedTech",
+      logo: "/company-logos/jnj.png",
       group: "Electrophysiology",
       role: "R&D Quality Intern",
       location: "Irvine, CA",
@@ -87,6 +98,7 @@ export const profile = {
     },
     {
       company: "Duke Simulation Centre",
+      logo: "/company-logos/duke.png",
       group: "Clinical R&D",
       role: "Clinical R&D Engineer",
       location: "Durham, NC",
@@ -215,6 +227,24 @@ export const profile = {
       images: ["/projects/plga-nanoparticles.png"]
     }
   ],
+
+  education: [
+    {
+      degree: "Master of Engineering in Biomedical Engineering",
+      school: "Duke University",
+      logo: "/education-logos/duke-placeholder.png",
+      details: "2026",
+      subtext: "Medical device design, quality systems and human factor engineering"
+    },
+    {
+      degree: "Bachelor of Science Honers in Biotechnology and minor in Industrial Engineering",
+      school: "Manipal University Jaipur",
+      logo: "/education-logos/manipal-placeholder.png",
+      details: "2023",
+      subtext: "Clinical Engineering, Bioinformatics, Human Mahcine Interaction, Biosensor Design, Genetic Engineering"
+    }
+  ],
+
   skills: [
     {
       title: "CAD & Medical Imaging",

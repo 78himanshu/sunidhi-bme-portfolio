@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import { profile } from "@/data/profile";
 import Container from "@/components/ui/Container";
@@ -34,22 +35,42 @@ export default function ExperiencePage() {
           {profile.experiences.map((experience) => (
             <Card key={`${experience.company}-${experience.role}`} className="p-6">
               <div className="flex flex-wrap items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-900">
-                    {experience.role} - {experience.company}
-                  </h3>
-                  <p className="text-sm text-slate-600">{experience.group}</p>
+                <div className="flex items-start gap-4">
+                  {experience.logo && (
+                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-white">
+                      <Image
+                        src={experience.logo}
+                        alt={`${experience.company} logo`}
+                        fill
+                        sizes="56px"
+                        className="object-contain p-2"
+                      />
+                    </div>
+                  )}
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      {experience.company}
+                    </h3>
+                    <p className="mt-1 text-base font-medium text-slate-700">
+                      {experience.role}
+                    </p>
+                    <p className="text-sm text-slate-600">{experience.group}</p>
+                  </div>
                 </div>
+
                 <div className="text-right text-sm text-slate-600">
                   <p>{experience.location}</p>
                   <p>{experience.dates}</p>
                 </div>
               </div>
+
               <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-600">
                 {experience.bullets.map((bullet) => (
                   <li key={bullet}>{bullet}</li>
                 ))}
               </ul>
+
               {experience.tags ? (
                 <div className="mt-4 flex flex-wrap gap-2">
                   {experience.tags.map((tag) => (
