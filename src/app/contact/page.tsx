@@ -1,93 +1,94 @@
-import SectionHeader from "@/components/SectionHeader";
+import Image from "next/image";
 import { profile } from "@/data/profile";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import Card from "@/components/ui/Card";
 
 export default function ContactPage() {
   return (
-    <Section>
+    <Section className="bg-gradient-to-br from-slate-50 to-sky-50">
       <Container>
-        <SectionHeader
-          eyebrow="Contact"
-          title="Let's Build Safer, Smarter Devices"
-          description="Reach out for collaborations, full-time roles, or project conversations in medical device design and quality engineering."
-        />
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <Card className="space-y-4 p-6" hover={false}>
-            <div>
-              <label className="text-xs font-semibold uppercase tracking-wider text-slate-600" htmlFor="name">
-                Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                className="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none focus:border-slate-900"
-                placeholder="Your name"
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+            Portfolio
+          </p>
+
+          <h1 className="mt-4 text-5xl font-semibold text-slate-900">
+            Contact
+          </h1>
+
+          <p className="mt-4 text-lg text-slate-600">
+            Open to collaborations, medical device design roles, quality
+            engineering opportunities, and healthcare innovation projects.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="rounded-3xl bg-white p-8 shadow-sm">
+            <div className="relative h-12 w-12">
+              <Image
+                src="/contact-icons/email-placeholder.png"
+                alt="Email"
+                fill
+                className="object-contain"
               />
             </div>
-            <div>
-              <label className="text-xs font-semibold uppercase tracking-wider text-slate-600" htmlFor="email">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                className="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none focus:border-slate-900"
-                placeholder="you@email.com"
-              />
-            </div>
-            <div>
-              <label className="text-xs font-semibold uppercase tracking-wider text-slate-600" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={5}
-                className="mt-2 w-full rounded-lg border border-slate-200 px-4 py-3 text-sm text-slate-900 outline-none focus:border-slate-900"
-                placeholder="Tell me about the project or role."
-              />
-            </div>
-            <button
-              type="button"
-              className="rounded-full bg-slate-900 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white"
+
+            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+              Email
+            </p>
+
+            <p className="mt-4 text-3xl font-semibold text-slate-900 break-all">
+              {profile.email}
+            </p>
+
+            <a
+              href={`mailto:${profile.email}`}
+              className="mt-8 inline-block text-lg font-medium text-slate-600 transition hover:text-slate-900"
             >
-              Send Message
-            </button>
-            <p className="text-xs text-slate-500">I typically reply immediately in 1-2 days, E-mails are my preferred method of communication</p>
-          </Card>
-          <div className="space-y-4">
-            <Card className="p-6" hover={false}>
-              <h3 className="text-lg font-semibold text-slate-900">Direct Contact</h3>
-              <div className="mt-4 space-y-2 text-sm text-slate-600">
-                <p>
-                  Email:{" "}
-                  <a className="text-slate-900" href={`mailto:${profile.email}`}>
-                    {profile.email}
-                  </a>
-                </p>
-                <p>
-                  LinkedIn:{" "}
-                  <a className="text-slate-900" href={profile.linkedinUrl} target="_blank" rel="noreferrer">
-                    {profile.linkedinUrl}
-                  </a>
-                </p>
-                <p>Location: {profile.location}</p>
-              </div>
-            </Card>
-            <Card className="p-6" hover={false}>
-              <h3 className="text-lg font-semibold text-slate-900">Resume</h3>
-              <p className="mt-2 text-sm text-slate-600">
-                Download the full resume for detailed project history, verification artifacts, and toolchain coverage.
-              </p>
-              <a
-                href="/api/resume"
-                className="mt-4 inline-flex rounded-full border border-slate-900 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-900 hover:bg-slate-900 hover:text-white"
-              >
-                Download Resume
-              </a>
-            </Card>
+              Send email →
+            </a>
           </div>
+
+          <div className="rounded-3xl bg-white p-8 shadow-sm">
+            <div className="relative h-12 w-12">
+              <Image
+                src="/contact-icons/linkedin-placeholder.png"
+                alt="LinkedIn"
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+              LinkedIn
+            </p>
+
+            <p className="mt-4 text-2xl font-semibold text-slate-900">
+              /Sunidhi Pandit
+            </p>
+
+            <a
+              href={profile.linkedinUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-block text-lg font-medium text-slate-600 transition hover:text-slate-900"
+            >
+              Visit LinkedIn →
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-12 flex items-center gap-4">
+          <a
+            href={`mailto:${profile.email}`}
+            className="rounded-full bg-slate-900 px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-800"
+          >
+            Email Me
+          </a>
+
+          <p className="text-slate-500">
+            I usually respond within 1–2 days.
+          </p>
         </div>
       </Container>
     </Section>
